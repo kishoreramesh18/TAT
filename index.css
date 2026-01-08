@@ -1,0 +1,245 @@
+/* ----------------------------------------------------
+   RESET
+---------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    background: #ffffff;
+}
+
+/* ----------------------------------------------------
+   TOP MARQUEE
+---------------------------------------------------- */
+#header1 {
+    background-color: orange;
+    color: white;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* ----------------------------------------------------
+   NAVBAR
+---------------------------------------------------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 5%;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 38px;
+    z-index: 999;
+}
+
+.logo img {
+    height: 55px;
+    width: auto;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.menu li a:hover {
+    color: orange;
+}
+
+/* Dropdown Base */
+.dropdown-menu,
+.sub-menu {
+    display: none;
+    position: absolute;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    list-style: none;
+    padding: 10px 0;
+}
+
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+.has-sub:hover .sub-menu {
+    display: block;
+    left: 100%;
+    top: 0;
+}
+
+/* ----------------------------------------------------
+   SLIDESHOW
+---------------------------------------------------- */
+.slideshow-container {
+    width: 100%;
+    max-height: 450px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.4);
+    border: none;
+    font-size: 30px;
+    padding: 8px 15px;
+    color: white;
+    border-radius: 4px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* ----------------------------------------------------
+   ABOUT SECTION
+---------------------------------------------------- */
+.about-section {
+    width: 90%;
+    margin: 50px auto;
+}
+
+.about-title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.about-box {
+    background: #f8f8f8;
+    padding: 25px;
+    line-height: 1.6;
+    border-radius: 8px;
+}
+
+.about-box p {
+    margin-bottom: 15px;
+}
+
+.read-more {
+    text-decoration: none;
+    color: orange;
+    font-weight: bold;
+}
+
+/* ----------------------------------------------------
+   FOOTER
+---------------------------------------------------- */
+#bottom {
+    margin-top: 40px;
+    text-align: center;
+    background: #222;
+    color: white;
+    padding: 20px;
+    font-size: 14px;
+}
+
+#bottom a {
+    color: #00b7ff;
+    text-decoration: none;
+}
+
+/* ----------------------------------------------------
+   RESPONSIVENESS
+---------------------------------------------------- */
+
+/* TABLET */
+@media (max-width: 992px) {
+    .menu {
+        gap: 20px;
+    }
+
+    .navbar {
+        padding: 10px 4%;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    /* NAVBAR becomes stacked */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .dropdown-menu,
+    .sub-menu {
+        position: static;
+        box-shadow: none;
+        padding-left: 15px;
+    }
+
+    .has-sub a::after {
+        content: "";
+    }
+
+    /* Slideshow shorter */
+    .slideshow-container {
+        max-height: 260px;
+    }
+}
+
+/* SMALL PHONES */
+@media (max-width: 480px) {
+
+    #header1 {
+        font-size: 12px;
+        height: 32px;
+    }
+
+    .logo img {
+        height: 45px;
+    }
+
+    .about-title {
+        font-size: 22px;
+    }
+
+    #bottom {
+        font-size: 12px;
+        padding: 15px;
+    }
+}
