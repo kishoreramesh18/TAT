@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TAT Admin Dashboard</title>
+    <link rel="icon" type="png" href="./TAT.png">
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <img src="./TAT.png" alt="TAT Logo">
+      <span>Taekwondo Association Tamil Nadu</span>
+    </div>
+
+    <div class="topbar-right">
+      <span class="admin">Admin</span>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+  </header>
+
+  <!-- LAYOUT -->
+  <div class="wrapper">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <nav>
+        <a class="active" onclick="showDashboard()">Dashboard</a>
+        <a onclick="loadForm()">TAT ONE ID</a>
+        <!-- <a>Members</a> -->
+        <!-- <a>Events</a> -->
+        <!-- <a>Certificates</a> -->
+        <!-- <a>Reports</a> -->
+        <!-- <a>Settings</a> -->
+      </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+      <!-- DASHBOARD CONTENT -->
+      <section id="dashboardContent">
+        <h1>Dashboard</h1>
+        <p class="subtitle">Administrative overview</p>
+
+        <!-- <div class="stats">
+          <div class="stat-card">
+            <span>Total Members</span>
+            <strong>—</strong>
+          </div>
+          <div class="stat-card">
+            <span>Active Events</span>
+            <strong>—</strong>
+          </div>
+          <div class="stat-card">
+            <span>Certificates</span>
+            <strong>—</strong>
+          </div>
+          <div class="stat-card">
+            <span>Reports</span>
+            <strong>—</strong>
+          </div>
+        </div> -->
+
+        <!-- <section class="panel">
+          <h2>Recent Activity</h2>
+          <p>No recent activity available.</p>
+        </section> -->
+      </section>
+
+      <!-- IFRAME CONTENT -->
+      <section id="iframeSection" class="panel iframe-panel">
+        <iframe
+          id="contentFrame"
+          src="<iframe frameborder="0" style="height:610px;width:99%;border:none;" src='https://forms.zohopublic.in/otasports/report/TAT/reportperma/_3NWVpBnHcoPdoslPtcIaIvejr0y8lcszdkDLBy_748'></iframe>"
+         
+        </iframe>
+      </section>
+
+    </main>
+  </div>
+  
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

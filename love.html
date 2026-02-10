@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TAT – ONE ID Registration</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/jpeg" href="./OTALOGOCDR.jpg">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* FIXED SCREEN — NO SCROLL */
+html, body{
+  height:100%;
+  overflow:hidden;
+}
+
+/* FULL PAGE */
+.page{
+  height:100vh;
+  display:flex;
+}
+
+/* MAIN LAYOUT */
+.container{
+  display:flex;
+  width:100%;
+}
+
+/* LEFT IMAGE */
+.left{
+  width:35%;
+  background:#000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.left img{
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;
+}
+
+/* RIGHT SIDE */
+.right{
+  width:65%;
+  display:flex;
+  flex-direction:column;
+  height:100vh;
+  background:#fff;
+}
+
+/* FORM AREA */
+.form-wrapper{
+  flex:1;
+  overflow:hidden;
+}
+
+.form-wrapper iframe{
+  width:100%;
+  height:100%;
+  border:none;
+}
+
+/* BRANDING CONTAINER */
+.branding{
+  height:70px;
+  border-top:1px solid #e2e2e2;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#fff;
+  flex-shrink:0;
+}
+
+/* BRANDING CONTENT (SPACING FIX IS HERE) */
+.branding-inner{
+  text-align:center;
+  font-size:12px;
+  color:#666;
+  line-height:1.4;
+  padding-top:6px;   /* ✅ GAP BETWEEN BORDER/SHADOW AND LOGO */
+}
+
+/* POWERED BY ROW */
+.powered-by{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  font-size:13px;
+}
+
+.powered-by img{
+  height:22px;
+  width:auto;
+  object-fit:contain;
+}
+
+/* LINKS */
+.copyright a{
+  color:#1a73e8;
+  text-decoration:none;
+  margin:0 3px;
+}
+
+.copyright a:hover{
+  text-decoration:underline;
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+  <div class="container">
+
+    <!-- LEFT IMAGE -->
+    <div class="left">
+      <img src="./ONEIDDDDD.png" alt="TAT Poster">
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right">
+
+      <div class="form-wrapper">
+        <iframe src="https://forms.zohopublic.in/otasports/form/TAT/formperma/rR1y8zZICkrlUlBZG6tdv9NX2DtDDPZghes8YfyeUkQ"></iframe>
+      </div>
+
+      <!-- BRANDING -->
+      <div class="branding">
+        <div class="branding-inner">
+
+          <div class="powered-by">
+            <span>Powered by</span>
+            <img src="./OTALOGOCDR.jpg" alt="OTASPORTS">
+          </div>
+
+          <div class="copyright">
+            Copyright © 2026 OTASPORTS. All rights reserved.
+            |
+            <a href="#">Terms of Use</a>
+            |
+            <a href="#">Privacy Policy</a>
+            |
+            <a href="#">Contact Us</a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
